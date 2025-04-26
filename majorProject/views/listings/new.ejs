@@ -1,0 +1,54 @@
+<% layout('/layouts/boilerplate') -%>
+
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+    <h2>Create A New Listing</h2>
+    <form method="post" action="/listing" novalidate class="needs-validation">
+    <div class="mb-3">
+       <label for="title" class="form-label"><b>Title</b></label>
+       <input type="text" name="listing[title]" class="form-control" placeholder="Enter the Title" required>
+       <div class="invalid-feedback">
+        Title must be short.
+      </div>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label"><b>Description</b></label>
+        <textarea name="listing[description]" class="form-control"></textarea>
+        <div class="invalid-feedback">
+            Please enter short description.
+          </div>
+     </div>
+    <div class="mb-3">
+        <label for="image" class="form-label"><b>Image</b></label>
+        <input type="text" name="listing[image]" class="form-control" placeholder="Enter a Image URL/Link">
+    </div>
+    <div class="row">
+         <div class="mb-3 col-sm-4">
+            <label for="price" class="form-label"><b>Price</b></label>
+            <input type="text" name="listing[price]" class="form-control" placeholder="1200" required>
+            <div class="invalid-feedback">
+                Please enter valid price.
+              </div>
+         </div>
+    
+         <div class="mb-3 col-sm-8">
+            <label for="country" class="form-label"><b>country</b></label>
+            <input type="text" name="listing[country]" class="form-control" placeholder="India" required>
+            <div class="invalid-feedback">
+                country name should be valid.
+              </div>
+         </div>
+    </div>
+    <div class="mb-3">
+        <label for="location" class="form-label"><b>Location</b></label>
+        <input type="text" name="listing[location]" class="form-control" placeholder="Jaipur,Rajasthan" required>
+        <div class="invalid-feedback">
+            Please enter valid location.
+          </div>
+    </div>
+    <button type="submit" class="btn btn-dark add-btn mb-3">Add</button>
+    </form>
+</div>
+</div>
+</body>
